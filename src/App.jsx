@@ -293,6 +293,8 @@ import { useState } from "react";
 function App() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState(null);
+
+  const [list, setList] = useState([]);
   console.log(input);
   const handleSubmit = () => {
     const namNu = input.toLowerCase().trim();
@@ -312,6 +314,11 @@ function App() {
         onChange={(e) => setInput(e.target.value)}
       />
       <button onClick={handleSubmit}>ADD</button>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
 
       {/* nam */}
       {result === "nam" && (
